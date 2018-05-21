@@ -2,7 +2,7 @@
 
 ## Purpose
 
-This project is the start of an *[Reverse Polish Notation](https://en.wikipedia.org/wiki/Reverse_Polish_notation)* (RPN) calculator that takes input from the command line.
+This project is the start of a *[Reverse Polish Notation](https://en.wikipedia.org/wiki/Reverse_Polish_notation)* (RPN) calculator that takes input from the command line.
 
 This will eventually support the following post-fix operator:
 
