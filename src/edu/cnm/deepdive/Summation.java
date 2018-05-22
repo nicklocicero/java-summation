@@ -1,5 +1,8 @@
 package edu.cnm.deepdive;
 
+import java.util.Stack;
+import java.lang.Math;
+
 /**
  * This is the class containing the main entry point for the RPN calculator.
  * 
@@ -13,25 +16,23 @@ public class Summation {
    * @param args
    */
   public static void main(String[] args) {
-    int sum = 0;
-    String output = "";
-    // for (int i = 0; i < args.length-1; i++) {
-    // int val = Integer.parseInt(args[i]);
-    // output += args[i] + " + ";
-    // sum += val;
-    // }
-    int i = 0;
-    while (i < args.length - 1) {
+    Stack<Double> stack = new Stack<>();
+    for (int i = 0; i < args.length; i++) {
       args[i] = args[i].trim();
-      int val = Integer.parseInt(args[i]);
-      output += args[i] + " + ";
-      sum += val;
-      i++;
+      if (args[i].equals("+")) {
+        double val1 = stack.pop();
+        double val2 = stack.pop();
+        stack.push(val1 + val2);
+      } else if (args[i].equals("-")) {
+        double val1 = stack.pop();
+        double val2 = stack.pop();
+        stack.push(val1 - val2);
+      } else {
+        double val = Double.parseDouble(args[i]);
+        stack.push(val);
+      }
     }
-    args[args.length - 1] = args[args.length - 1].trim();
-    int val = Integer.parseInt(args[args.length - 1]);
-    sum += val;
-    output += args[args.length - 1] + " = " + Integer.toString(sum);
-    System.out.println(output);
+    System.out.print("Result = ");
+    System.out.printf("%,.2f%n", stack.pop());
   }
 }
