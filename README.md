@@ -16,5 +16,5 @@ This will eventually support the following post-fix operator:
 Development will follow these steps:
 
 1. Read input from command line (complete).
-2. Distinguish operands and operators.
-3. Implement stack interpreter.
+2. Distinguish operands and operators (complete).
+3. Implement stack interpreter (partially complete).

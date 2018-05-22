@@ -7,13 +7,16 @@ import java.lang.Math;
  * This is the class containing the main entry point for the RPN calculator.
  * 
  * @author spy
- * @version 0.1.0
+ * @version 0.2.0
  */
-public class Summation {
+public class RpnCalculator {
+
+  private RpnCalculator() {}
+
   /**
    * Command-line entry point for RPN interpreter.
    * 
-   * @param args
+   * @param args operands and operators.
    */
   public static void main(String[] args) {
     Stack<Double> stack = new Stack<>();
