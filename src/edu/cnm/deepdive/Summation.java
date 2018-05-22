@@ -20,7 +20,6 @@ public class Summation {
     for (int i = 0; i < args.length; i++) {
       String arg = args[i].trim().toLowerCase();
       switch (arg) {
-        // FIXME - Replace repeated statements with method call.
         case "add":
         case "+":
           add(stack);
